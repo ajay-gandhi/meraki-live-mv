@@ -14,7 +14,7 @@ lifxClient.init();
 
 console.log("Starting...");
 lifxClient.on("light-new", (light) => {
-  if (light.address === IP) {
+  if (light.address === LIGHT_IP) {
     console.log("Found light");
 
     // Assume MQTT server is running locally
@@ -33,7 +33,7 @@ lifxClient.on("light-new", (light) => {
       const population = JSON.parse(message.toString()).objects.length;
       const hue = cap(MAX_HUE, 0, MAX_HUE - (population * MAX_HUE / MAX_POP));
       const brightness = cap(MAX_BRIGHT, 0, population * MAX_BRIGHT / MAX_POP);
-      console.log(`${pop} people, changing to hue ${hue}, brightness ${brightness}`);
+      console.log(`${population} people, changing to hue ${hue}, brightness ${brightness}`);
       light.color(hue, 100, brightness, undefined, COLOR_FADE_DURATION);
     });
 
