@@ -1,0 +1,31 @@
+{
+  "name": "meraki-live-mv",
+  "version": "1.0.0",
+  "description": "Control LIFX lights with Meraki MV API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajay-gandhi/meraki-live-mv.git"
+  },
+  "keywords": [
+    "meraki",
+    "mv",
+    "lifx",
+    "light",
+    "smart",
+    "api"
+  ],
+  "author": "Ajay Gandhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajay-gandhi/meraki-live-mv/issues"
+  },
+  "homepage": "https://github.com/ajay-gandhi/meraki-live-mv#readme",
+  "dependencies": {
+    "mqtt": "^2.18.8",
+    "node-lifx": "^0.8.0"
+  }
+}
